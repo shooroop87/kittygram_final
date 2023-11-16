@@ -19,8 +19,8 @@ services:
       - static:/backend_static
       - media:/app/media/
   frontend:
-    image: shooroop87/kittygram_frontend
     env_file: .env
+    image: shooroop87/kittygram_frontend
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static:/frontend_static
